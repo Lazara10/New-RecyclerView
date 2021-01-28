@@ -17,9 +17,9 @@ class UsersAdapter (context: Context, users: ArrayList<user>) :
         val nameTextView: TextView = cv.findViewById(R.id.Name)
         val profilePic: ImageView = cv.findViewById(R.id.ProfilePic)
 
-        nameTextView.text = user?.Name
+        nameTextView.text = user?.name
         Glide.with(context)
-            .load(user?.Url)
+            .load(user?.url)
             .placeholder(R.drawable.ic_launcher_background)
             .centerCrop()
             .into(profilePic)
